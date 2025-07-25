@@ -10,6 +10,13 @@
 </style>
 {% endblock css_extended %}
 
+<script>
+ window.getCode = ()=>{
+    console.log("CODE")
+  }
+</script>
+
+
 {% block content %}
 {% if 'findings' in extensions %}
 <div class="tab-pane {% if active == "tabs-findings" %}active show{% endif %}"
@@ -129,6 +136,12 @@
                                              </svg>
                                         </a>
                                     </li>
+                                      <li onClick="getCode()"  class="nav-item" id="get-code-false">
+                                        <a href="#code-verify" class="nav-link ms-auto" data-bs-toggle="tab">
+                                          AI
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                             <div class="card-body">
