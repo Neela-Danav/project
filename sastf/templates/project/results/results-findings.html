@@ -389,7 +389,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
         const aiField = document.getElementsByClassName("aiStuff")[0];
-        const apiKey = "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"; // Replace with your actual OpenRouter key
+        const apiKey = "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"; 
         const model = "mistralai/mistral-small-3.2-24b-instruct";
 
         const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -440,7 +440,7 @@
 
         const { title, code } = results[0];
 
-        const prompt = `Explain and provide secure code recommendations for the following snippet titled "${title}":\n\n${code.join("\n")}`;
+        const prompt = `Explain me the code vulnerability and how would i cross verify this vulnerability to make working proof of concept "${title}":\n\n${code.join("\n")}`;
 
         try {
             const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
